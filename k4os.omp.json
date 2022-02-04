@@ -14,13 +14,13 @@
         {
           "type": "os",
           "style": "powerline",
-          "powerline_symbol": "\uE0B0",
+          "powerline_symbol": "\uE0B0 ",
           "foreground": "#ffffff",
-          "background": "#0095e9",
+          "background": "#0476d0",
           "properties": {
             "prefix": " ",
-            "windows": "\uF179",
-            "postfix": ""
+            "windows": "\uF179 ",
+            "postfix": "  "
           }
         },
         {
@@ -28,13 +28,24 @@
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
           "foreground": "#ffffff",
-          "background": "#0095e9",
+          "background": "#0087d8",
           "properties": {
-            "prefix": " ",
+            "prefix": " @",
             "display_host": false,
             "postfix": " "
           }
         },
+        // {
+        //   "type": "aws",
+        //   "style": "powerline",
+        //   "powerline_symbol": "\uE0B0",
+        //   "foreground": "#ffffff",
+        //   "background": "#0095e9",
+        //   "properties": {
+        //     "prefix": "\uf662  ",
+        //     "template": "{{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
+        //   }
+        // },
         {
           "type": "path",
           "style": "powerline",
@@ -63,21 +74,7 @@
             "ahead_and_behind_color": "#e43b44",
             "behind_color": "#f77622",
             "ahead_color": "#2ce8f5",
-            "stash_count_icon": "\uF692 "
-          }
-        },
-        {
-          "type": "exit",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#242424",
-          "background": "#6fbd26",
-          "properties": {
-            "display_exit_code": false,
-            "always_enabled": true,
-            "color_background": true,
-            "error_color": "#b81a44",
-            "prefix": " \ufc8d"
+            "stash_count_icon": " \uF692 "
           }
         }
       ]
@@ -90,16 +87,30 @@
           "type": "battery",
           "style": "powerline",
           "invert_powerline": true,
-          "powerline_symbol": "\uE0B2",
+          "powerline_symbol": " \uE0B2",
           "foreground": "#242424",
-          "background": "#f36943",
+          "background": "#0095e9",
           "properties": {
-            "battery_icon": "\f583",
+            "battery_icon": "\uf583",
             "color_background": true,
             "charged_color": "#0476d0",
-            "charging_color": "#33DD2D",
+            "charging_color": "#5dde59",
             "discharging_color": "#FFCD58",
-            "postfix": "\uF295 \uf583 "
+            "postfix": "\uF295 \uf583 ",
+            "prefix": " "
+          }
+        },
+        {
+          "type": "kubectl",
+          "style": "powerline",
+          "invert_powerline": true,
+          "powerline_symbol": "\uE0B2",
+          "foreground": "#ffffff",
+          "background": "#0087d8",
+          "properties": { 
+            "prefix":  " ", 
+            "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
+            "postfix": " "
           }
         },
         {
@@ -150,6 +161,18 @@
             "prefix": "",
             "text": "🚀"
           }
+        },
+        {
+          "foreground": "#00ff0d",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ff0000{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true,
+            "template": "\u279C "
+          },
+          "style": "plain",
+          "type": "exit"
         }
       ]
     }
