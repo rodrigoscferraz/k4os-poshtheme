@@ -55,15 +55,15 @@
           "properties": {
             "prefix": " \uE5FF ",
             "style": "agnoster_short",
-	    "max_depth": 2,
+            "max_depth": 2,
             "folder_separator_icon": "/"
           }
         },
         {
           "type": "git",
           "style": "powerline",
-	  "background": "#f07d0a",
-	  "foreground": "#262b44",
+          "background": "#f07d0a",
+          "foreground": "#262b44",
           "powerline_symbol": "",
           "properties": {
             "display_stash_count": true,
@@ -107,9 +107,9 @@
           "powerline_symbol": "\uE0B2",
           "foreground": "#ffffff",
           "background": "#0087d8",
-          "properties": { 
-            "prefix":  " ", 
-            "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
+          "properties": {
+            "prefix":  " ",
+            "template": "{{abbrevboth 42 25 .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
             "postfix": " "
           }
         },
